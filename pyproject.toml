@@ -1,0 +1,34 @@
+[project]
+name = "uplift-targeting"
+version = "0.1.0"
+description = "Decide who to send a coupon to by estimating how much it changes their chance of buying."
+requires-python = ">=3.11"
+dependencies = [
+    "duckdb>=1.1",
+    "matplotlib>=3.9",
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "pyarrow>=17",
+    "scipy>=1.13",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29",
+    "pytest>=8",
+    "ruff>=0.6",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/uplift"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

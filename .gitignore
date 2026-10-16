@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Data is downloaded and derived, never committed
+data/
+
+# Notebooks
+.ipynb_checkpoints/
+# Claude's reference notebooks: you study these, then write your own in notebooks/
+notebooks/_reference/
+
+# Secrets
+.env
+
+# Agent tooling stays local
+CLAUDE.md
+AGENTS.md
+.claude/
+graphify-out/
