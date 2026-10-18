@@ -11,10 +11,18 @@ dist/
 # Data is downloaded and derived, never committed
 data/
 
+# Model weights and checkpoints are large and downloaded, never committed
+*.safetensors
+*.bin
+*.pt
+*.pth
+checkpoints/
+
+# Go build output
+/bin/
+
 # Notebooks
 .ipynb_checkpoints/
-# Claude's reference notebooks: you study these, then write your own in notebooks/
-notebooks/_reference/
 
 # Secrets
 .env
